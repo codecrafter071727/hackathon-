@@ -3,25 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --soft-blue: #4A90E2;
+  --pale-lavender: #D4C1EC;
+  --light-sage-green: #7CB342;
+  --soft-gray: #F5F7FA;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-soft-gray text-dark-gray;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-dark-gray;
+  }
+  a {
+    @apply text-soft-blue hover:text-dark-gray;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .bg-soft-blue {
+    background-color: var(--soft-blue);
+  }
+  .bg-pale-lavender {
+    background-color: var(--pale-lavender);
+  }
+  .bg-light-sage-green {
+    background-color: var(--light-sage-green);
+  }
+  .bg-soft-gray {
+    background-color: var(--soft-gray);
+  }
+  .text-soft-blue {
+    color: var(--soft-blue);
+  }
+  .text-pale-lavender {
+    color: var(--pale-lavender);
+  }
+  .text-light-sage-green {
+    color: var(--light-sage-green);
+  }
+  .text-dark-gray {
+    color: var(--dark-gray);
+  }
+  .text-medium-gray {
+    color: var(--medium-gray);
   }
 }
+
